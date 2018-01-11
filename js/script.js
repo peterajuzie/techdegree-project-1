@@ -20,9 +20,9 @@ function print(message) {
   outputDiv.innerHTML = message;
 }
 
-// Generate random number from 0 to 10 to use in randomly selecting individual quote and color objects.
+// Generate random number from 0 to 19 to use in randomly selecting individual quote and color objects.
 function getRandomNumber() {
-  return Math.floor(Math.random() * 10) + 1;
+  return Math.floor(Math.random() * 19) + 1;
 }
 
 // Generate random background color on click;
