@@ -2,19 +2,17 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 //document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
 var randomNumber, randomQuote, hexColor, randomColor, quote, timeout;
 var message = '';
 var bgColor = '';
 
 // Refresh page using the setTimeout and reload methods after a specified time in milliseconds
-// The resetTimeout function resets the refresh timer
+// The resetTimeout function resets the refresh timer giving you time to read the quote if you click the new quote button well into the timer :)
 timeout = setTimeout("location.reload(true);",25000);
   function resetTimeout() {
     clearTimeout(timeout);
     timeout = setTimeout("location.reload(true);",25000);
   }
-
 
 // This print function targets a specific section on the html page with id 'quote-box'
 function print(message) {
@@ -22,7 +20,7 @@ function print(message) {
   outputDiv.innerHTML = message;
 }
 
-// Generate random number to use in randomly selecting individual quote objects
+// Generate random number from 0 to 10 to use in randomly selecting individual quote and color objects.
 function getRandomNumber() {
   return Math.floor(Math.random() * 10) + 1;
 }
@@ -36,9 +34,14 @@ function buttonColor() {
   document.getElementById('loadQuote').style.backgroundColor = bgColors[getRandomNumber()];
 }
 
-// Picks a random quote from the quotes oject
+// Picks a random quote from the quotes object
 function getRandomQuote(quote) {
-  quote = quotes[getRandomNumber()];
+  return quotes[getRandomNumber()];
+}
+
+// This function will print the random quote object on the page
+function printQuote() {
+  quote = getRandomQuote();
   randomQuote = '<p class= "quote">' + quote.quote + '</p>';
   randomQuote += '<p class= "source">' + quote.source;
   if (quote.citation !== '') {
@@ -47,14 +50,9 @@ function getRandomQuote(quote) {
   if (quote.year !== undefined) {
     randomQuote += '<span class= "year">' + quote.year + '</span>';
   }
+  randomQuote += '<span class="tag">' + quote.tag + '</span>';
   randomQuote += '</p>';
-  return randomQuote;
-}
-
-// This function will print the random quote object on the page
-function printQuote() {
-  message = getRandomQuote(randomQuote);
-  print(message);
+  print(randomQuote);
 }
 
 // Put all functions into a single function and call all at once
