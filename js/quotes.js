@@ -70,7 +70,7 @@ var quotes = [
     source: 'André Gide',
     citation: 'Autumn Leaves',
     year:1950,
-    tag: 'love'
+    tag: 'motivation'
   },
   {
     quote: 'Simplicity is the ultimate sophistication today.',
