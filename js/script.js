@@ -2,9 +2,19 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 //document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-var randomNumber, randomQuote, hexColor, randomBgColor, quote;
+
+var randomNumber, randomQuote, hexColor, randomColor, quote, timeout;
 var message = '';
 var bgColor = '';
+
+// Refresh page using the setTimeout and reload methods after a specified time in milliseconds
+// The resetTimeout function resets the refresh timer
+timeout = setTimeout("location.reload(true);",25000);
+  function resetTimeout() {
+    clearTimeout(timeout);
+    timeout = setTimeout("location.reload(true);",25000);
+  }
+
 
 // This print function targets a specific section on the html page with id 'quote-box'
 function print(message) {
@@ -15,6 +25,15 @@ function print(message) {
 // Generate random number to use in randomly selecting individual quote objects
 function getRandomNumber() {
   return Math.floor(Math.random() * 10) + 1;
+}
+
+// Generate random background color on click;
+function printColor() {
+  document.body.style.backgroundColor = bgColors[getRandomNumber()];
+}
+
+function buttonColor() {
+  document.getElementById('loadQuote').style.backgroundColor = bgColors[getRandomNumber()];
 }
 
 // Picks a random quote from the quotes oject
@@ -37,4 +56,13 @@ function printQuote() {
   message = getRandomQuote(randomQuote);
   print(message);
 }
-printQuote();
+
+// Put all functions into a single function and call all at once
+// Will be usefull during the 'onclick' function calls in the html
+function callFunctions() {
+  printColor();
+  printQuote();
+  buttonColor();
+  resetTimeout();
+}
+callFunctions();

@@ -21,9 +21,9 @@ var quotes = [
     year: undefined
   },
   {
-    quote: 'Whether you think you can, or you think you can\'t, either way you\'re right.',
-    source: 'Henry Ford',
-    citation: '',
+    quote: 'Whether you think you can, or you think you can\'t, you\'re right. See you tomorrow.',
+    source: 'Stewie',
+    citation: 'Family Guy',
     year: undefined
   },
   {
