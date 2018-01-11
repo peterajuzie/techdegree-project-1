@@ -49,7 +49,7 @@ var quotes = [
     source: 'Mahatma Gandhi',
     citation: '',
     year: undefined,
-    tag: 'wisom'
+    tag: 'wisdom'
   },
   {
     quote: 'Be the change that you wish to see in the world.',
@@ -78,5 +78,68 @@ var quotes = [
     citation: 'The Recognitions',
     year:1955,
     tag: 'business'
+  },
+  {
+    quote: 'If you wish to move mountains tomorrow, you must start lifting stones today.',
+    source: 'Traditional African Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'wisdom'
+  },
+  {
+    quote: 'A beautiful thing is never perfect.',
+    source: 'Traditional Egyptian Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'beauty'
+  },
+  {
+    quote: 'When spider webs unite, they can tie up a lion.',
+    source: 'Traditional African Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'politics'
+  },
+  {
+    quote: 'Do not look at where you fell, but where you slipped.',
+    source: 'Traditional African Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'wisdom'
+  },
+  {
+    quote: 'Be like the bamboo, the higher you grow, the deeper you bow.',
+    source: 'Traditional Chinese Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'wisdom'
+  },
+  {
+    quote: 'You\'ll never plow a tree by turning it over in your mind.',
+    source: 'Traditional Irish Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'wisdom'
+  },
+  {
+    quote: 'To get lost is to learn the way.',
+    source: 'Traditional African Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'wisdom'
+  },
+  {
+    quote: 'What an elder sees while sitting, a child cannot see even if they climb the tallest iroko tree.',
+    source: 'Nigerian (Igbo) Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'wisdom'
+  },
+  {
+    quote: 'Eyes that do not cry, do not see.',
+    source: 'Traditional Swedish Proverb',
+    citation: '',
+    year:undefined,
+    tag: 'wisdom'
   }
 ];
